@@ -66,13 +66,15 @@ public class MainActivity extends AppCompatActivity {
     public void resetGame(View view) {
         questions(findViewById(R.id.questionTextView));
         playButton(findViewById(R.id.playButton));
-        scoreTextView.setText("0/0");
         playAgainButton.setVisibility(View.INVISIBLE);
         resultTextView.setText(" ");
         button0.setEnabled(true);
         button1.setEnabled(true);
         button2.setEnabled(true);
         button3.setEnabled(true);
+        correctOptionScore=0;
+        totalQuestions=0;
+        scoreTextView.setText(Integer.toString(correctOptionScore) + "/" + Integer.toString(totalQuestions));
 
     }
 
